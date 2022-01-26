@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    /* (2)- Adding display flex */
+    display: flex;
+    /* (11)- removing scroll bar */
+    overflow: hidden;
+}
+
+/* 
+---------------
+(1)- Adding h1 styling with text shadow
+---------------
+*/
+
+h1 {
+    font-size: 360px;
+    font-weight: 900;
+    color: #000000;
+    text-shadow: 4px 4px #0026ff, 8px 8px #00ffea, 12px 12px #ffc4c4;
+    transition: all 0.2s ease-out;
+}
+
+/* 
+---------------
+(8)- moving h1 away
+---------------
+*/
+
+section h1 {
+    transform: translateX(-10px);
+}
+
+main h1 {
+    transform: translateX(10px);
+}
+
+/* 
+---------------
+(9)- adding h1 hover
+---------------
+*/
+
+section:hover h1, main:hover h1 {
+    transform: translateX(0);
+    text-shadow: none;
+}
+
+/* 
+---------------
+(3)- Adding flex basis
+---------------
+*/
+
+section, main {
+    flex-basis: 50%;
+    display: flex;
+    transform: scale(1);
+    transition: all 0.2s ease-out;
+}
+
+/* 
+---------------
+(5)- Aligning the main and section
+---------------
+*/
+
+main {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* 
+---------------
+(6)- Adding hover effect
+---------------
+*/
+
+section:hover, main:hover {
+    transform: scale(1.01);
+}
+
+section:hover {
+    box-shadow: 2px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+main:hover {
+    box-shadow: -2px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
